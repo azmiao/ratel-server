@@ -27,14 +27,14 @@ jobs:
           go build -x -v
       
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v2.3.1
+      uses: actions/upload-artifact@v4.4.0
       with:
         name: server-${{ matrix.os }}
         path: server.exe
         if: ${{ matrix.os  == 'windows-latest' }}
         
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v2.3.1
+      uses: actions/upload-artifact@v4.4.0
       with:
         name: server-${{ matrix.os }}
         path: server
